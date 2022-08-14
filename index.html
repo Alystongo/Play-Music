@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Play Music</title>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="widtb=dev-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik+Burned&display=swap" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+    </head>
+    
+    <body>
+        
+        <!--- Menu --->
+        <nav>
+            
+            <div class="logo">
+                <p style="color: white; font-family: 'Rubik Burned', cursive;"><i class="fa fa-music" arai-hidden="true"></i> Play Music </p>
+            </div>
+            
+            <div class="dropdown">
+                <button style="font-family: 'Rubik Distressed', cursive;" class="dropbtn"><p id="nav-folders">Folders</p> <i class="fa fa-bars" arai-hidden="true"></i></button>
+                <div id="drop-cont" class="dropdown-content">
+                    <a class="nav-inter-btn" href="#">Internacional</a>
+                    <a class="nav-rock-btn" href="#">Rock</a>
+                    <a class="nav-geek-btn" href="#">Trap/Rap Geek</a>
+                 </div>
+            </div>
+
+        </nav>
+        
+
+        <main>
+            <!--- Folders-btn ---> 
+            <div class="folders" style="display: noe">
+                <h1>Welcome</h1>
+                <p>Select any of the folders below<br>and have fun with the music</p>
+                
+                <ul class="folders-btn">
+                    <li><button class="inter-btn">Internacional</button></li>
+                    <li><button class="rock-btn">Rock</button></li>
+                    <li><button class="geek-btn">Trap/Rap Geek</button></li>
+                </ul>
+            </div>
+            
+            <!--- Song --->
+            <div class="body-play" style="display: none">
+                <!--- Song Title --->
+                <div class="song-title">
+                    <p id="title"> title </p>
+                    <p id="artist"> artist </p>
+                </div>
+            
+                <!--- Image --->
+                <div class="song-img">
+                    <img id="song-img">
+                </div>
+            
+                <!--- Midle Party --->
+                <div class="midle">
+                    <button onclick="previous_song()" class="btn-midle previous" id="pre"><img class="btn-midle-img img-previous" src="./img/previous.png"></button>
+                
+                    <button onclick="justplay()" class="btn-midle justplay" id="play"><img id="pause" class="btn-midle-img img-justplay" src="./img/play.png"></button>
+                                
+                    <button onclick="next_song()" class="btn-midle next" id="next"><img class="btn-midle-img img-next" src="./img/next.png"></button>
+                </div><br>  
+                
+                <!--- Song Duraction --->
+                <div class="duration">
+                   <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+                </div>
+
+            </div>
+        </main>
+        
+        <!--- Footer --->
+        <footer>
+            <p> copyright &copy; Play Music 2022</p>
+        </footer>
+        
+        <!--- Add JavaScript --->
+        <script type="text/javascript" src="script.js"></script>
+        
+        <script type="text/javascript" src="functions.js"></script>
+        
+        <script type="text/javascript" src="jquery.js"></script>
+    </body>
+</html>
